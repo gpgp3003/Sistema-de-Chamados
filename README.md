@@ -1,4 +1,11 @@
-# Projeto_Faculdade_Java
-Um sistema de chamados em Java feito como trabalho final da disciplina de Desenvolvimento de Sistemas Orientados a Objetos I
+﻿Source-Code-Inspection [![Build Status](https://travis-ci.org/gpgp3003/TesteSistemaDeChamados.svg?branch=master)](https://travis-ci.org/gpgp3003/TesteSistemaDeChamados)
 
-Obs: O trabalho não foi feito inteiramente por mim, cabendo crédito também aos meus colegas Richard Bertozzo Junior, Bruno Peres Schneider e Rodolfo Dartora da Silva. 
+
+
+# Projeto_Faculdade_Java
+
+Repositorio fonte: https://github.com/MayconGesser/Projeto_Faculdade_Java
+
+Atividade de Teste de Software
+
+Prof. Calebe - FCI Mackenzie
