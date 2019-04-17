@@ -1,4 +1,4 @@
-﻿Source-Code-Inspection [![Build Status](https://travis-ci.org/gpgp3003/TesteSistemaDeChamados.svg?branch=master)](https://travis-ci.org/gpgp3003/TesteSistemaDeChamados)
+﻿Source-Code-Inspection [![Build Status](https://travis-ci.org/gpgp3003/Sistema-de-Chamados.svg?branch=master)](https://travis-ci.org/gpgp3003/Sistema-de-Chamados)
 
 
 
