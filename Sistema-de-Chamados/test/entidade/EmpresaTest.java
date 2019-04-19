@@ -7,102 +7,62 @@ package entidade;
 
 import org.junit.After;
 import org.junit.AfterClass;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import entidade.Empresa;
 
 /**
  *
- * @author Gian Piero
+ * @author Rodrigo Folco
  */
 public class EmpresaTest {
     
-    public EmpresaTest() {
+    /*Testes de Inicialização*/
+    @Test
+    public void criarEmpresaTest(){
+        Empresa e = new Empresa(33456, "UPM");
+        assertEquals(e.getNomeEmpresa(), "UPM");
+        assertEquals(e.getNumeroContrato(), 33456);
     }
     
-    @BeforeClass
-    public static void setUpClass() {
+    @Test (expected = Exception.class)
+    public void criarNumeroContratoInvalidoTest()throws Exception{
+        Empresa e = new Empresa(-33456, "UPM");
     }
     
-    @AfterClass
-    public static void tearDownClass() {
+    @Test (expected = Exception.class)
+    public void criarNomeEmpresaNullTest()throws Exception{
+        Empresa e = new Empresa(33456, null);
     }
     
-    @Before
-    public void setUp() {
+    /*Testes de Alteração*/
+    @Test
+    public void alterarNumeroContratoTest(){
+        Empresa e = new Empresa(33456, "UPM");
+        e.setNumeroContrato(33456);
+        assertEquals(e.getNumeroContrato(), 33456);
     }
     
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of getNumeroContrato method, of class Empresa.
-     */
     @Test
-    public void testGetNumeroContrato() {
-        System.out.println("getNumeroContrato");
-        Empresa instance = null;
-        long expResult = 0L;
-        long result = instance.getNumeroContrato();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setNumeroContrato method, of class Empresa.
-     */
-    @Test
-    public void testSetNumeroContrato() {
-        System.out.println("setNumeroContrato");
-        long numeroContrato = 0L;
-        Empresa instance = null;
-        instance.setNumeroContrato(numeroContrato);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getNomeEmpresa method, of class Empresa.
-     */
-    @Test
-    public void testGetNomeEmpresa() {
-        System.out.println("getNomeEmpresa");
-        Empresa instance = null;
-        String expResult = "";
-        String result = instance.getNomeEmpresa();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setNomeEmpresa method, of class Empresa.
-     */
-    @Test
-    public void testSetNomeEmpresa() {
-        System.out.println("setNomeEmpresa");
-        String nomeEmpresa = "";
-        Empresa instance = null;
-        instance.setNomeEmpresa(nomeEmpresa);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toString method, of class Empresa.
-     */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Empresa instance = null;
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void alterarNomeEmpresaTest(){
+        Empresa e = new Empresa(33456, "UPM");
+        e.setNomeEmpresa("UPM-FCI");
+        assertEquals(e.getNomeEmpresa(), "UPM-FCI");
     }
     
+    /*Testes de Alteração para valores inválidos*/
+    @Test (expected = Exception.class)
+    public void alterarNumeroContratoInvalidoTest()throws Exception{
+        Empresa e = new Empresa(33456, "UPM");
+        e.setNumeroContrato(-332);
+    }
+    
+    @Test (expected = Exception.class)
+    public void alterarNomeEmpresaInvalidoTest()throws Exception{
+        Empresa e = new Empresa(33456, "UPM");
+        e.setNomeEmpresa(null);
+    }
 }
