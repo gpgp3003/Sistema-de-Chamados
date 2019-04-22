@@ -73,7 +73,7 @@ public class ChamadoTest {
 
     @Test(expected = Exception.class)
     public void verificarDadosInvalidosTest() throws Exception {
-        Chamado chamadoInvalido = new Chamado(ce1.getCodigo(), null, 123, 5, t1, ce1, "WINDOWS", "VISTA", null, 19216821);
+         Chamado chamadoInvalido = new Chamado(ce1.getCodigo(), "XXXX", "Erro", -5, null, ce1, null, "0", "NULO", null);
 
     }
 

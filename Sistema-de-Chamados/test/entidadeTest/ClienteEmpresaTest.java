@@ -49,7 +49,7 @@ public class ClienteEmpresaTest {
     public void verificarDadosInvalidosTest()throws Exception{
         Empresa emp3 = new Empresa(1000, "Mackenzie");
         Pessoa p3 = new Pessoa("Joao", 12345678);
-        ClienteEmpresa ce3 = new ClienteEmpresa(100.5, emp3, -1351848, p3.getNome(), p3.getTelefone());
+        ClienteEmpresa ce3 = new ClienteEmpresa(-100, emp3, -1351848, p3.getNome(), p3.getTelefone());
     }
     
 
