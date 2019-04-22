@@ -27,12 +27,12 @@ import static org.junit.Assert.*;
  * @author 31704913
  */
 public class ChamadoTest {
+
     Empresa emp = new Empresa(1, "Mackenzie");
     Pessoa p1 = new Pessoa("Gian", 31704913);
     Tecnico t1 = new Tecnico("Rodrigo", 11111111);
     ClienteEmpresa ce1 = new ClienteEmpresa(123, emp, 1351848, p1.getNome(), p1.getTelefone());
     Chamado ch = new Chamado(ce1.getCodigo(), "Problema", "Problema tecnicos na internet", 5, t1, ce1, "WINDOWS", "VISTA", "AAA", "192.168.2.1");
-
 
     @Test
     public void cadastrarChamadoTest() {
@@ -71,11 +71,10 @@ public class ChamadoTest {
 
     }
 
-    @Test
+    @Test(expected = Exception.class)
     public void verificarDadosInvalidosTest() throws Exception {
-        Chamado chamadoInvalido = new Chamado(ce1.getCodigo(), null, 123 , 5, t1, ce1, "WINDOWS", "VISTA",  null , 19216821);
-        
+        Chamado chamadoInvalido = new Chamado(ce1.getCodigo(), null, 123, 5, t1, ce1, "WINDOWS", "VISTA", null, 19216821);
+
     }
-   
 
 }

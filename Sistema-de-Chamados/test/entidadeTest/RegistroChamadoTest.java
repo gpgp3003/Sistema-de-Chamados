@@ -46,8 +46,8 @@ public class RegistroChamadoTest {
     
     
     @Test(expected = Exception.class)
-    public void verificarSeAssuntoDoRegistroChamadoENuloTest()throws Exception{
-        RegistroChamado rc3 = new RegistroChamado(null, chamado, tec);
+    public void verificarDadoNullTest() throws Exception{
+        RegistroChamado rc = new RegistroChamado(null, chamado, tec);
     }
     
 }
